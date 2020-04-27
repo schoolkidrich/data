@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>investigate-a-dataset-template</title>
+<title>project_2</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -14166,12 +14166,45 @@ memory usage: 1.0+ MB
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># function for line graph</span>
+<span class="k">def</span> <span class="nf">line_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">titl</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titl</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># function for bar graph</span>
+<span class="k">def</span> <span class="nf">bar_graph</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">lab</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">titl</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">tick_label</span><span class="o">=</span><span class="n">lab</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titl</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Movies&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Used decades and horror_mean_pop lists that I created earlier as x and y axis</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">horror_mean_pop</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Popularity of Horror Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
+<span class="n">line_graph</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">horror_mean_pop</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s2">&quot;Popularity of Horror Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14211,7 +14244,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list of number of horror movies</span>
@@ -14228,15 +14261,12 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating bar graph of number of horror movies per decade</span>
 <span class="n">locations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">locations</span><span class="p">,</span> <span class="n">horror_movies_count</span><span class="p">,</span> <span class="n">tick_label</span> <span class="o">=</span> <span class="n">decades</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Number of Horror Movies Released from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Movies&#39;</span><span class="p">)</span>
+<span class="n">bar_graph</span><span class="p">(</span><span class="n">locations</span><span class="p">,</span> <span class="n">horror_movies_count</span><span class="p">,</span> <span class="n">decades</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s2">&quot;Number of Horror Movies Released from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14246,19 +14276,6 @@ memory usage: 1.0+ MB
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Text(0, 0.5, &#39;Number of Movies&#39;)</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -14289,7 +14306,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#List for average popularity of comedy films</span>
@@ -14306,14 +14323,10 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">comedy_mean_pop</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Popularity of Comedy Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">line_graph</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">comedy_mean_pop</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s2">&quot;Popularity of Comedy Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14353,7 +14366,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#amount of comedy movies produced</span>
@@ -14370,13 +14383,10 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">locations</span><span class="p">,</span> <span class="n">comedy_movies_count</span><span class="p">,</span> <span class="n">tick_label</span> <span class="o">=</span> <span class="n">decades</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Number of Comedy Movies Released from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Movies&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bar_graph</span><span class="p">(</span><span class="n">locations</span><span class="p">,</span> <span class="n">comedy_movies_count</span><span class="p">,</span> <span class="n">decades</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s2">&quot;Number of Comedy Movies Released from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14386,19 +14396,6 @@ memory usage: 1.0+ MB
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Text(0, 0.5, &#39;Number of Movies&#39;)</pre>
-</div>
-
-</div>
 
 <div class="output_area">
 
@@ -14429,7 +14426,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#popularity of action movies over time</span>
@@ -14446,14 +14443,10 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">action_mean_pop</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Popularity of Comedy Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">line_graph</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">action_mean_pop</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s2">&quot;Popularity of Action Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14472,7 +14465,7 @@ memory usage: 1.0+ MB
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -14493,7 +14486,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#amount of action movies made</span>
@@ -14510,13 +14503,10 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">locations</span><span class="p">,</span> <span class="n">action_movies_count</span><span class="p">,</span> <span class="n">tick_label</span> <span class="o">=</span> <span class="n">decades</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Number of Action Movies Released from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Movies&#39;</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bar_graph</span><span class="p">(</span><span class="n">locations</span><span class="p">,</span> <span class="n">action_movies_count</span><span class="p">,</span> <span class="n">decades</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s2">&quot;Number of Action Movies Released from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14556,7 +14546,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># popularity of movies in general</span>
@@ -14573,14 +14563,10 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">movie_pop</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Popularity of Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Popularity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">line_graph</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">movie_pop</span><span class="p">,</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s2">&quot;Popularity of Movies from 1960&#39;s to 2010&#39;s&quot;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -14620,7 +14606,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">decades</span><span class="p">,</span> <span class="n">horror_mean_pop</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Horror&#39;</span><span class="p">)</span>
@@ -14678,7 +14664,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Seperated database into low revenue and high revenue movies</span>
@@ -14694,7 +14680,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">high_revenue</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14710,7 +14696,7 @@ memory usage: 1.0+ MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14863,7 +14849,7 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">low_revenue</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14879,7 +14865,7 @@ memory usage: 1.0+ MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -15040,16 +15026,31 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#function for bar graph </span>
+<span class="k">def</span> <span class="nf">bar_graph2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">lab</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">titl</span><span class="p">,</span><span class="n">ylab</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">tick_label</span> <span class="o">=</span> <span class="n">lab</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titl</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">ylab</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Comparing popularity of low revenue and popularity of high revenue movies</span>
 <span class="n">location</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Low Revenue&#39;</span><span class="p">,</span> <span class="s1">&#39;High Revenue&#39;</span><span class="p">]</span>
 <span class="n">popularity</span> <span class="o">=</span> <span class="p">[</span><span class="n">low_revenue</span><span class="o">.</span><span class="n">popularity</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">high_revenue</span><span class="o">.</span><span class="n">popularity</span><span class="o">.</span><span class="n">mean</span><span class="p">()]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">popularity</span><span class="p">,</span> <span class="n">tick_label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;pink&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Average Movie Popularity&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Popularity Score&#39;</span><span class="p">);</span>
+<span class="n">bar_graph2</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">popularity</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span><span class="s1">&#39;Average Movie Popularity&#39;</span><span class="p">,</span><span class="s1">&#39;Popularity Score&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -15089,16 +15090,12 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Comparing budget of low revenue and budget of high revenue movies</span>
-<span class="n">location</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Low Revenue&#39;</span><span class="p">,</span> <span class="s1">&#39;High Revenue&#39;</span><span class="p">]</span>
 <span class="n">budget</span> <span class="o">=</span> <span class="p">[</span><span class="n">low_revenue</span><span class="o">.</span><span class="n">budget_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">high_revenue</span><span class="o">.</span><span class="n">budget_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">()]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">tick_label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;gold&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Average Movie Budgets&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Budget (10 Millions)&#39;</span><span class="p">);</span>
+<span class="n">bar_graph2</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="s1">&#39;gold&#39;</span><span class="p">,</span><span class="s1">&#39;Average Movie Budgets&#39;</span><span class="p">,</span><span class="s1">&#39;Budget (10 Millions)&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -15138,16 +15135,14 @@ memory usage: 1.0+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Comparing return of low revenue and high revenue movies</span>
 <span class="n">roi_low</span> <span class="o">=</span> <span class="p">(</span><span class="n">low_revenue</span><span class="o">.</span><span class="n">revenue_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">-</span><span class="n">low_revenue</span><span class="o">.</span><span class="n">budget_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">low_revenue</span><span class="o">.</span><span class="n">budget_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="n">roi_high</span> <span class="o">=</span> <span class="p">(</span><span class="n">high_revenue</span><span class="o">.</span><span class="n">revenue_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">-</span><span class="n">high_revenue</span><span class="o">.</span><span class="n">budget_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">low_revenue</span><span class="o">.</span><span class="n">budget_adj</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="n">roi</span> <span class="o">=</span> <span class="p">[</span><span class="n">roi_low</span><span class="p">,</span> <span class="n">roi_high</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">roi</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span> <span class="n">labels</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Average Movie Return&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Return on Investment (ROI)&#39;</span><span class="p">);</span>
+<span class="n">bar_graph2</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> <span class="n">roi</span><span class="p">,</span><span class="n">labels</span><span class="p">,</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span><span class="s1">&#39;Average Movie Return&#39;</span><span class="p">,</span><span class="s1">&#39;Return on Investment (ROI)&#39;</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -15196,6 +15191,19 @@ memory usage: 1.0+ MB
 <li>The popularity of action movies are above average and increasing over time, particularly in the last 10 years. </li>
 <li>Films that make more in revenue typically also have higher popularity.</li>
 <li>Even though films that make more revenue cost more to produce, they are generally more profitable. </li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Limitations">Limitations<a class="anchor-link" href="#Limitations">&#182;</a></h2><blockquote><ol>
+<li>Rows with incorrect values were replaced with mean.  </li>
+<li>Rows with null values were removed. They could have contained key information. </li>
+<li>Data did not include information such as ticket sales, opening week sales, or movie ratings.  </li>
 </ol>
 </blockquote>
 
