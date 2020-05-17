@@ -1,3 +1,6 @@
+Investigation on Movie Trends
+Richard Zheng
+
 Analysis on data from from The Movie Database (TMDb).
 
 Main findings:
